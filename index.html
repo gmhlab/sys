@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Asset Library</title>
+  <style>
+    :root {
+      --bg: #f9f9f9;
+      --fg: #222;
+      --card-bg: #fff;
+      --card-border: #ddd;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+    }
+
+    header {
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--card-border);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    main {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .image-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .image-card:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .image-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .image-card .info {
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Image Asset Library</h1>
+  </header>
+
+  <main>
+    <!-- Example image card -->
+    <div class="image-card">
+      <img src="assets/example1.jpg" alt="Example 1">
+      <div class="info">
+        <span>example1.jpg</span>
+        <a href="assets/example1.jpg" download>Download</a>
+      </div>
+    </div>
+
+    <div class="image-card">
+      <img src="assets/example2.png" alt="Example 2">
+      <div class="info">
+        <span>example2.png</span>
+        <a href="assets/example2.png" download>Download</a>
+      </div>
+    </div>
+
+    <!-- Add more image-card blocks here -->
+  </main>
+
+  <footer>
+    &copy; 2025 Image Asset Library
+  </footer>
+</body>
+</html>
